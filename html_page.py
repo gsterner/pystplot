@@ -1,7 +1,9 @@
 body_template="""
 <html>
   <head>
-    <script type="text/javascript" src="flotr2.min.js"></script>
+    <script src="transforms.js"></script>
+    <script src="plotmain.js"></script>
+    <script src="numerics.js"></script>
     <style type="text/css">
       body {
         margin: 0px;

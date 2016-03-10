@@ -5,6 +5,6 @@ function_call_template = """      (function () {
           graph, i;
 
         // Draw Graph
-        graph = Flotr.draw(container, plot_list, {
-        });
+        graph = sternplot(container, plot_list);
+
       })();"""
