@@ -77,8 +77,10 @@ def data_to_flotr_format(x_list, y_list):
     return return_list
 
 def set_line_properties(property_string, line_object):
+    line_object['lines'] = {'show':True}
     if 'o' in property_string:
         line_object['points'] = {'show':True}
+        line_object['lines'] = {'show':False}
     if '-' in property_string:
         line_object['lines'] = {'show':True}
     if 'r' in property_string:
