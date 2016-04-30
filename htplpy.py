@@ -78,20 +78,16 @@ def subplot(rows, cols, index):
     global fig_info
     global current_plot
     current_plot = index - 1
-    print '->', current_plot
     if not do_subplot:
         fig_info = FigureInfo(rows, cols)
         do_subplot = True
 
 def plot(x_list, y_list, property_string='-'):
     global fig_info
-    print 'PLOT', current_plot
     data_list = html_writer.data_to_flotr_format(x_list, y_list)
     line_object = html_writer.flotr_line_object(data_list, property_string)
     fig_info.get_plot(current_plot).append_line(line_object)
 
 def show():
-    for p in fig_info._plots:
-        print p._lines
     html_writer.make_html_file(fig_info, PLOT_FILE)
     webbrowser.open(PLOT_FILE)
