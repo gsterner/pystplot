@@ -20,7 +20,7 @@ $function_call_tag
 container_tag_template="""<div id="${container_id}" style="width : ${width}px; height : ${height}px; display: table-cell;"></div>"""
 
 table_template="""
-<div style="width: 1300px; height:400px; display: table;">
+<div style="display: table;">
   ${table_row}
 </div>"""
 
