@@ -1,4 +1,4 @@
-import pystplot as pl
+import pystplot.pystplot as pl
 import math
 
 x_inds = range(-20,10)
