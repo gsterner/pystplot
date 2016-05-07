@@ -1,9 +1,7 @@
 body_template="""
 <html>
   <head>
-    <script src="transforms.js"></script>
-    <script src="plotmain.js"></script>
-    <script src="numerics.js"></script>
+    $plot_api_scripts
     <style type="text/css">
       body {
         margin: 0px;

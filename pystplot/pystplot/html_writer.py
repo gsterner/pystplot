@@ -1,5 +1,6 @@
 import html_page
 import jstemplate
+import plot_api_templates
 import webbrowser
 from string import Template
 
@@ -26,6 +27,15 @@ def get_function_call_tag(plot_info_dict):
     function_call_js = Template(jstemplate.function_call_template)
     function_call_string = function_call_js.substitute(plot_info_dict)
     return script_tag.substitute(script = function_call_string)
+
+def get_plot_api_scripts():
+    script_transforms = Template(html_page.script_tag_template)
+    script_plotmain = Template(html_page.script_tag_template)
+    script_numerics = Template(html_page.script_tag_template)
+    script_string = script_transforms.substitute(script = plot_api_templates.transforms_script_template)
+    script_string += script_transforms.substitute(script = plot_api_templates.plotmain_script_template)
+    script_string += script_transforms.substitute(script = plot_api_templates.numerics_script_template)
+    return script_string
 
 def get_function_tags(fig_info):
     tags = ""
@@ -65,6 +75,7 @@ def get_plot_table(fig_info):
 def get_html(fig_info):
     html = Template(html_page.body_template)
     tags = {}
+    tags['plot_api_scripts'] = get_plot_api_scripts()
     tags['function_call_tag'] = get_function_tags(fig_info)
     tags['plot_table'] = get_plot_table(fig_info)
     return html.substitute(tags)
