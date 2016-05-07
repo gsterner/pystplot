@@ -1,4 +1,4 @@
-import htplpy as pl
+import pystplot as pl
 import math
 import random
 

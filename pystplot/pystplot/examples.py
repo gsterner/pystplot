@@ -1,4 +1,4 @@
-import htplpy as pl
+import pystplot as pl
 import math
 
 x_inds = range(-20,10)
