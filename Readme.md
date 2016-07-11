@@ -11,8 +11,8 @@ pip install pystplot
 ```
 Usage
 ------
-To plot a function, simply assign x and y values to two lists and call pystplot.plot(...).
-Call either the pystplot.show() to create an output file and show it in the browser or pystplot.save(...) to just save the html file.
+To plot a function, simply assign x and y values to two lists and call `pystplot.plot(...)`.
+Call either the `pystplot.show()` to create an output file and show it in the browser or `pystplot.save(...)` to just save the html file.
 
 Example
 --------
@@ -25,14 +25,18 @@ pl.plot(x_values, y_values)
 
 pl.show()
 ```
+
 Functions
 ----------
 ```
 plot(...)
 ```
+```
 show()
 ```
+```
 save(...)
+```
 ```
 subplot(...)
 ```
