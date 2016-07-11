@@ -1,8 +1,10 @@
+import os
 import json
 import webbrowser
 import html_writer
 
-PLOT_FILE = "output.html"
+PLOT_FILE = "pystplot_output.html"
+HTML_SUFFIX = ".html"
 
 class PlotInfo:
     def __init__(self, name = 'container'):
@@ -88,6 +90,12 @@ def plot(x_list, y_list, property_string='-'):
     line_object = html_writer.flotr_line_object(data_list, property_string)
     fig_info.get_plot(current_plot).append_line(line_object)
 
+def save(file_name=PLOT_FILE):
+    file_prefix, file_suffix = os.path.splitext(file_name)
+    if not file_suffix:
+        file_name = file_name + HTML_SUFFIX
+    html_writer.make_html_file(fig_info, file_name)
+
 def show():
-    html_writer.make_html_file(fig_info, PLOT_FILE)
+    save(PLOT_FILE)
     webbrowser.open(PLOT_FILE)
