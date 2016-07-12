@@ -26,7 +26,26 @@ pl.show()
 
 Functions
 ----------
-plot(...)
+
+plot(x_list, y_list, property_string='-')
+
+    Creates the plot data.
+    Parameters:
+        
+    x_list             list of values for x-axis
+    y_list             list of values for y-axis. Lists must be of same length
+    property_string    sets appearence of graph. Possible choices:
+                       'o'   points
+                       '-'   line
+                       'r'   red
+                       'b'   blue
+                       'g'   green
+                       'y'   yellow
+                       'm'   magenta
+                       'c'   cyan
+                       'w'   white
+                       'k'   black         
+   
 show()
 save(...)
 subplot(...)

@@ -85,6 +85,24 @@ def subplot(rows, cols, index):
         do_subplot = True
 
 def plot(x_list, y_list, property_string='-'):
+"""
+    Creates the plot data.
+    Parameters:
+        
+    x_list             list of values for x-axis
+    y_list             list of values for y-axis. Lists must be of same length
+    property_string    sets appearence of graph. Possible choices:
+                       'o'   points
+                       '-'   line
+                       'r'   red
+                       'b'   blue
+                       'g'   green
+                       'y'   yellow
+                       'm'   magenta
+                       'c'   cyan
+                       'w'   white
+                       'k'   black         
+"""
     global fig_info
     data_list = html_writer.data_to_flotr_format(x_list, y_list)
     line_object = html_writer.flotr_line_object(data_list, property_string)
