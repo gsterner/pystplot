@@ -1,5 +1,5 @@
 # PyStPlot
-A VERY simple plotting tool for python that creates plots to be viewed in the web broser.
+A VERY basic plotting tool for python that creates plots to be viewed in the web broser.
 Creates an html file containing the plot drawn with html canvas.
 
 ## Install with pip
@@ -69,7 +69,7 @@ file_name    string that contains file name of output html-file.
 subplot(rows, cols, index)
 ```
 
-Creates a matrix of plots in a Matlab/Matplotlib manner. ```subplot(rows, cols, index)``` before ```plot(x_list, y_list, property_string='-')
+Creates a matrix of plots in a Matlab/Matplotlib manner. Call ```subplot(rows, cols, index)``` before ```plot(x_list, y_list, property_string='-')
 ``` to tag the plot.
 
 ```
