@@ -47,7 +47,23 @@ plot(x_list, y_list, property_string='-')
                        'k'   black         
    
 show()
-save(...)
-subplot(...)
+
+    Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
+
+save(file_name=PLOT_FILE)
+
+    Saves an html-file with file name given as parameter. If no name is given the default "pystplot_output" is used.
+    Parameter:
+
+    file_name    string that contains file name of output html-file.
+
+subplot(rows, cols, index)
+
+    Creates a matrix of plots in a Matlab/Matplotlib manner. Call subplot(...) before plot(...) to tag the plot.
+    Parameters:
+    
+    rows    number of rows in plot matrix
+    cols    number of columns in plot matrix
+    index   index of this specific plot - indexed from left to right.
 
 """

@@ -76,6 +76,14 @@ current_plot = 0
 do_subplot = False
 
 def subplot(rows, cols, index):
+"""
+    Creates a matrix of plots in a Matlab/Matplotlib manner. Call subplot(...) before plot(...) to tag the plot.
+    Parameters:
+    
+    rows    number of rows in plot matrix
+    cols    number of columns in plot matrix
+    index   index of this specific plot - indexed from left to right.
+"""
     global do_subplot
     global fig_info
     global current_plot
@@ -109,11 +117,20 @@ def plot(x_list, y_list, property_string='-'):
     fig_info.get_plot(current_plot).append_line(line_object)
 
 def save(file_name=PLOT_FILE):
+"""
+    Saves an html-file with file name given as parameter. If no name is given the default "pystplot_output" is used.
+    Parameter:
+
+    file_name    string that contains file name of output html-file.
+"""
     file_prefix, file_suffix = os.path.splitext(file_name)
     if not file_suffix:
         file_name = file_name + HTML_SUFFIX
     html_writer.make_html_file(fig_info, file_name)
 
 def show():
+"""
+    Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
+"""
     save(PLOT_FILE)
     webbrowser.open(PLOT_FILE)

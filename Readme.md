@@ -31,28 +31,40 @@ Functions
 ```
 plot(x_list, y_list, property_string='-')
 ```
-    Creates the plot data.
-    Parameters:
+Creates the plot data.
+Parameters:
         
-    x_list             list of values for x-axis
-    y_list             list of values for y-axis. Lists must be of same length
-    property_string    sets appearence of graph. Possible choices:
-                       'o'   points
-                       '-'   line
-                       'r'   red
-                       'b'   blue
-                       'g'   green
-                       'y'   yellow
-                       'm'   magenta
-                       'c'   cyan
-                       'w'   white
-                       'k'   black         
+x_list             list of values for x-axis
+y_list             list of values for y-axis. Lists must be of same length
+property_string    sets appearence of graph. Possible choices:
+                   'o'   points
+                   '-'   line
+                   'r'   red
+                   'b'   blue
+                   'g'   green
+                   'y'   yellow
+                   'm'   magenta
+                   'c'   cyan
+                   'w'   white
+                   'k'   black         
 ```
 show()
 ```
+Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
+
 ```
-save(...)
+save(file_name=PLOT_FILE)
 ```
+Saves an html-file with file name given as parameter. If no name is given the default "pystplot_output" is used.
+    Parameter:
+
+    file_name    string that contains file name of output html-file.
 ```
-subplot(...)
+subplot(rows, cols, index)
 ```
+Creates a matrix of plots in a Matlab/Matplotlib manner. Call subplot(...) before plot(...) to tag the plot.
+    Parameters:
+    
+    rows    number of rows in plot matrix
+    cols    number of columns in plot matrix
+    index   index of this specific plot - indexed from left to right.
