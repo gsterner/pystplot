@@ -16,7 +16,7 @@ Call either the `pystplot.show()` to create an output file and show it in the br
 
 Example
 --------
-```
+```python
 import pystplot as pl
 
 x_values = range(-10,11)
@@ -28,10 +28,13 @@ pl.show()
 
 Functions
 ----------
-```
+
+```python
 plot(x_list, y_list, property_string='-')
 ```
 Creates the plot data.
+
+```
 Parameters:
         
 x_list             list of values for x-axis
@@ -48,23 +51,34 @@ property_string    sets appearence of graph. Possible choices:
                    'w'   white
                    'k'   black         
 ```
+
+```python
 show()
 ```
 Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
 
-```
+```python
 save(file_name=PLOT_FILE)
 ```
 Saves an html-file with file name given as parameter. If no name is given the default "pystplot_output" is used.
-    Parameter:
 
-    file_name    string that contains file name of output html-file.
 ```
+Parameter:
+
+file_name    string that contains file name of output html-file.
+```
+
+```python
 subplot(rows, cols, index)
 ```
-Creates a matrix of plots in a Matlab/Matplotlib manner. Call subplot(...) before plot(...) to tag the plot.
-    Parameters:
+
+Creates a matrix of plots in a Matlab/Matplotlib manner. ```subplot(rows, cols, index)``` before ```plot(x_list, y_list, property_string='-')
+``` to tag the plot.
+
+```
+Parameters:
     
-    rows    number of rows in plot matrix
-    cols    number of columns in plot matrix
-    index   index of this specific plot - indexed from left to right.
+rows    number of rows in plot matrix
+cols    number of columns in plot matrix
+index   index of this specific plot - indexed from left to right.
+```
