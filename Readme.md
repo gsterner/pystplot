@@ -1,20 +1,20 @@
-PyStPlot
+# PyStPlot
 ========
 
 A VERY simple plotting tool for python that creates plots to be viewed in the web broser.
 Creates an html file containing the plot drawn with html canvas.
 
-Install with pip
+## Install with pip
 -----------------
 ```
 pip install pystplot
 ```
-Usage
+## Usage
 ------
 To plot a function, simply assign x and y values to two lists and call `pystplot.plot(...)`.
 Call either the `pystplot.show()` to create an output file and show it in the browser or `pystplot.save(...)` to just save the html file.
 
-Example
+## Example
 --------
 ```python
 import pystplot as pl
@@ -26,9 +26,10 @@ pl.plot(x_values, y_values)
 pl.show()
 ```
 
-Functions
+## Functions
 ----------
 
+### Plot
 ```python
 plot(x_list, y_list, property_string='-')
 ```
@@ -52,11 +53,13 @@ property_string    sets appearence of graph. Possible choices:
                    'k'   black         
 ```
 
+### Show
 ```python
 show()
 ```
 Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
 
+### Save
 ```python
 save(file_name=PLOT_FILE)
 ```
@@ -68,6 +71,7 @@ Parameter:
 file_name    string that contains file name of output html-file.
 ```
 
+### Subplot
 ```python
 subplot(rows, cols, index)
 ```
