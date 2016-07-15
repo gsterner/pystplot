@@ -1,5 +1,5 @@
 import csv
-import pystplot.pystplot as pl
+import pystplot as pl
 
 with open('time_series_data.csv', 'rb') as f:
     reader = csv.reader(f)

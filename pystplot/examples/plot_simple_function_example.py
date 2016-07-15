@@ -1,4 +1,4 @@
-import pystplot.pystplot as pl
+import pystplot as pl
 
 '''
 To plot a function, simply assign x and y values two two lists and call pystplot.plot().

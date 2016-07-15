@@ -67,3 +67,5 @@ subplot(rows, cols, index)
     index   index of this specific plot - indexed from left to right.
 
 """
+
+from pystplot import plot, subplot, show, save

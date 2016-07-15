@@ -1,4 +1,4 @@
-import pystplot.pystplot as pl
+import pystplot as pl
 import math
 
 x_inds = range(-20,10)
@@ -16,7 +16,7 @@ pl.plot(x_vals, x2,'-r')
 pl.plot(x_vals, sin_vals,'ro')
 
 pl.subplot(2,2,3)
-pl.plot(x_vals, x2,'-r')
+pl.plot(x_vals, x2,'-m')
 pl.plot(x_vals, sin_vals,'ro')
 
 pl.subplot(2,2,4)
