@@ -14,8 +14,18 @@
     <p><b>pystplot</b> is a free </p>
     <h2>Lorem ipsum dolor?</h2>
     <p>Praesent aliquam,  justo convallis luc</p>
-    <h2>Suspendisse potenti?</h2>
-    <p>Quisque ornare risus quis  ligula. </p>
+    <h2>Simple Function Example</h2>
+    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
+      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <pre><code>
+	import pystplot as pl
+	
+	x_values = range(-10,11)
+	y_values = [x*x for x in x_values]
+	pl.plot(x_values, y_values)
+	pl.show()
+    </pre></code>
+    <img src="simple.png" />
   </div>
   <div id="footer"> &copy;2007 Keep it Simple &nbsp;<span class="separator">|</span>&nbsp; Design by <a href="http://www.realitysoftware.ca">Reality Software</a> </div>
 </div>
