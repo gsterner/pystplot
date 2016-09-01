@@ -25,7 +25,30 @@
 	pl.plot(x_values, y_values)
 	pl.show()
     </pre></code>
-    <img src="simple.png" />
+    <img src="images/simple.png" />
+    <h2>Scatterplot Example</h2>
+    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
+      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <pre><code>
+import pystplot as pl
+import math
+import random
+
+x_inds = range(-20,10)
+x_vals = [xi/10.0 for xi in x_inds]
+
+y_random = [x + random.randint(-10,10)/10.0 for x in x_vals]
+
+pl.plot(x_vals, x_vals,'-r')
+pl.plot(x_vals, y_random, 'o')
+
+
+pl.show()
+
+    </pre></code>
+    <img src="images/scatter.png" />
+    <img src="images/time-series.png" />
+    <img src="images/subplot.png" />
   </div>
   <div id="footer"> &copy;2007 Keep it Simple &nbsp;<span class="separator">|</span>&nbsp; Design by <a href="http://www.realitysoftware.ca">Reality Software</a> </div>
 </div>
