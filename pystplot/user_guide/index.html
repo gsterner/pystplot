@@ -30,25 +30,73 @@
     <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
       The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
     <pre><code>
-import pystplot as pl
-import math
-import random
+	import pystplot as pl
+	import math
+	import random
 
-x_inds = range(-20,10)
-x_vals = [xi/10.0 for xi in x_inds]
+	x_inds = range(-20,10)
+	x_vals = [xi/10.0 for xi in x_inds]
 
-y_random = [x + random.randint(-10,10)/10.0 for x in x_vals]
+	y_random = [x + random.randint(-10,10)/10.0 for x in x_vals]
 
-pl.plot(x_vals, x_vals,'-r')
-pl.plot(x_vals, y_random, 'o')
+	pl.plot(x_vals, x_vals,'-r')
+	pl.plot(x_vals, y_random, 'o')
 
-
-pl.show()
-
+	pl.show()
     </pre></code>
-    <img src="images/scatter.png" />
+    <img src="images/scatter.png" />  
+    <h2>Time Series Example</h2>
+    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
+      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <pre><code>
+	import csv
+	import pystplot as pl
+
+	with open('time_series_data.csv', 'rb') as f:
+	reader = csv.reader(f)
+	all_rows = [row for row in reader]
+
+	y_data =  [float(row[1]) for row in all_rows]
+	x_vals = range(len(y_data))
+
+	pl.plot(x_vals, y_data)
+	pl.show()
+    </pre></code>
+  
     <img src="images/time-series.png" />
-    <img src="images/subplot.png" />
+    <h2>Subplot Example</h2>
+    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
+      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <pre><code>
+	import pystplot as pl
+	import math
+
+	x_inds = range(-20,10)
+	x_vals = [xi/10.0 for xi in x_inds]
+	y_vals = [math.exp(-x*x) for x in x_vals]
+	sin_vals =  [math.sin(x) for x in x_vals]
+	x2 = [2*x for x in x_vals]
+
+	pl.subplot(2,2,1)
+	pl.plot(x_vals, y_vals, '-og')
+	pl.plot(x_vals, x_vals, '-o')
+
+	pl.subplot(2,2,2)
+	pl.plot(x_vals, x2,'-r')
+	pl.plot(x_vals, sin_vals,'ro')
+
+	pl.subplot(2,2,3)
+	pl.plot(x_vals, x2,'-m')
+	pl.plot(x_vals, sin_vals,'ro')
+
+	pl.subplot(2,2,4)
+	pl.plot(x_vals, y_vals, '-o')
+	pl.plot(x_vals, x_vals, '-o')
+
+	pl.show()
+    </pre></code>
+  
+    <img src="images/subplot.png" height="540" width="720"/>
   </div>
   <div id="footer"> &copy;2007 Keep it Simple &nbsp;<span class="separator">|</span>&nbsp; Design by <a href="http://www.realitysoftware.ca">Reality Software</a> </div>
 </div>
