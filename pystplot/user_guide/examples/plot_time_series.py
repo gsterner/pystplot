@@ -1,6 +1,9 @@
 import csv
 import pystplot as pl
 
+'''
+Larger amounts of data can also be displayed
+'''
 with open('time_series_data.csv', 'rb') as f:
     reader = csv.reader(f)
     all_rows = [row for row in reader]

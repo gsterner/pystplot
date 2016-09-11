@@ -1,26 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
-<title>Keep it Simple</title>
+<title>PyStPlot</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
 <div id="container">
 </div>
-  <div id="header"> <a href="http://all-free-download.com/free-website-templates/">Pystplot</a> </div>
-  <div id="menu"> <a href="http://all-free-download.com/free-website-templates/">HOME</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://all-free-download.com/free-website-templates/">ABOUT US</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://all-free-download.com/free-website-templates/">SERVICES</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://all-free-download.com/free-website-templates/">PRICING</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://all-free-download.com/free-website-templates/">CONTACTS</a> </div>
-    <div id="main">
-    <p><b>pystplot</b> is a free </p>
-    <h2>Lorem ipsum dolor?</h2>
-    <p>Praesent aliquam,  justo convallis luc</p>
+  <div id="header"> Pystplot </div>
+  <div id="menu"> <a href=""></a></div>
+  <div id="main">
+    <h1>PyStPlot</h1>
+      <p><b>PyStPlot</b>
+	is A VERY basic plotting tool for python that creates plots to be viewed in the web broser.
+	Creates an html file containing the plot drawn with html canvas.
+      </p>
+      
+      <h1>Install with pip</h1>
+          <p>
+    <pre><code>
+	pip install pystplot
+    </pre></code>
+    </p>
+
+      <h1>Usage</h1>
+      <p>To plot a function, simply assign x and y values to two lists and call `pystplot.plot(...)`.
+Call either the `pystplot.show()` to create an output file and show it in the browser or `pystplot.save(...)` to just save the html file.
+</p>
+      <h1>Functions</h1>
+      <h2>Plot</h2>
+    <p>
+      <pre><code>
+	  plot(x_list, y_list, property_string='-')
+      </pre></code>
+    </p>
+    <p>
+      Creates the plot data.
+    </p>
+        <p>
+      <pre><code>
+Parameters:
+        
+x_list             list of values for x-axis
+y_list             list of values for y-axis. Lists must be of same length
+property_string    sets appearence of graph. Possible choices:
+                   'o'   points
+                   '-'   line
+                   'r'   red
+                   'b'   blue
+                   'g'   green
+                   'y'   yellow
+                   'm'   magenta
+                   'c'   cyan
+                   'w'   white
+                   'k'   black         
+	  
+      </pre></code>
+    </p>
+
+
+          <h2>Show</h2>
+    <p>
+      <pre><code>
+	  show()
+      </pre></code>
+    </p>
+    Saves an html-file called "pystplot_output.html" that constains the plot and opens it in the default web browser.
+    <p>
+    </p>
+
+    <h2>Save</h2>
+    <p>
+      <pre><code>
+	  save(file_name=PLOT_FILE)
+      </pre></code>
+    </p>
+    <p>
+      Saves an html-file with file name given as parameter. If no name is given the default "pystplot_output" is used.
+    </p>
+    <p>
+      <pre><code>
+Parameter:
+
+file_name    string that contains file name of output html-file.	  
+      </pre></code>
+    </p>
+
+          <h2>Subplot</h2>
+    <p>
+      <pre><code>
+subplot(rows, cols, index)
+      </pre></code>
+    </p>
+    Creates a matrix of plots in a Matlab/Matplotlib manner. Call <code>subplot(rows, cols, index)</code>before <code>plot(x_list, y_list, property_string='-')</code> to tag the plot.
+    <p>
+    </p>
+    <p>
+      <pre><code>
+Parameters:
+    
+rows    number of rows in plot matrix
+cols    number of columns in plot matrix
+index   index of this specific plot - indexed from left to right.
+      </pre></code>
+    </p>
+    
+      <h1>Examples</h1>
     <h2>Simple Function Example</h2>
     <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
       The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
     <p>
-    <a href="examples/plot_simple_function_example.py" download>
-      plot_simple_function_example.py
-    </a>
     <pre><code>
 	import pystplot as pl
 	
@@ -30,10 +119,16 @@
 	pl.show()
     </pre></code>
     </p>
+    <div>
+      Download link to example code:
+      <a href="examples/plot_simple_function_example.py" download>
+	plot_simple_function_example.py
+      </a>
+    </div>
+
     <img src="images/simple.png" />
     <h2>Scatterplot Example</h2>
-    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
-      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <p>Several lines of different types can be displayed in the same plot. The last argument of the plot function sets the display type. 'o' displays the data as filled dots.  
     <pre><code>
 	import pystplot as pl
 	import math
@@ -49,10 +144,16 @@
 
 	pl.show()
     </pre></code>
+        <div>
+      Download link to example code:
+      <a href="examples/scatter_example.py" download>
+	scatter_example.py
+      </a>
+    </div>
+
     <img src="images/scatter.png" />  
     <h2>Time Series Example</h2>
-    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
-      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <p>Larger amounts of data can also be displayed</p>
     <pre><code>
 	import csv
 	import pystplot as pl
@@ -67,11 +168,22 @@
 	pl.plot(x_vals, y_data)
 	pl.show()
     </pre></code>
-  
+      <div>
+      Download link to example code:
+      <a href="examples/plot_time_series.py" download>
+	plot_time_series.py
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data used in example:
+      <a href="examples/time_series_data.csv" download>
+	time_series_data.csv
+      </a>
+
+    </div>
+
     <img src="images/time-series.png" />
     <h2>Subplot Example</h2>
-    <p>To plot a function, simply assign x and y values two two lists and call pystplot.plot().
-      The pystplot.show() function needs to be called to create an output file and show it in the browser.</p>
+    <p> To create several plots together use the subplot function. This creates a matrix of plots in a Matlab/Matplotlib manner. Call <code>subplot(rows, cols, index)</code>before <code>plot(x_list, y_list, property_string='-')</code> to tag the plot.
+</p>
     <pre><code>
 	import pystplot as pl
 	import math
@@ -100,10 +212,17 @@
 
 	pl.show()
     </pre></code>
-  
+
+    <div>
+      Download link to example code:
+      <a href="examples/subplot_example.py" download>
+	subplot_example.py
+      </a>
+    </div>
+</br>
     <img src="images/subplot.png" height="540" width="720"/>
   </div>
-  <div id="footer"> &copy;2007 Keep it Simple &nbsp;<span class="separator">|</span>&nbsp; Design by <a href="http://www.realitysoftware.ca">Reality Software</a> </div>
+<div id="footer"> &copy;2016 Pystplot &nbsp;<span class="separator">|</span>&nbsp;  </div>
 </div>
-<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+
 </html>
