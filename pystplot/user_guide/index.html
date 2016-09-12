@@ -12,18 +12,19 @@
   <div id="main">
     <h1>PyStPlot</h1>
       <p><b>PyStPlot</b>
-	is A VERY basic plotting tool for python that creates plots to be viewed in the web broser.
-	Creates an html file containing the plot drawn with html canvas.
-      </p>
-      
-      <h1>Install with pip</h1>
+	is a VERY basic plotting tool for python that creates plots to be viewed in the web browser. It creates an html file that contain the plot data drawn with javascript and html canvas.
+      </p>      
+      <h2>Why use PyStPlot?</h2>
+          <p>
+	    PyStPlot is light and self contained. It has no external dependencies except for built in Python modules. It is not packed with features but ideal if you quickly want to make a plot on a system where no such libraries are installed. If you want an advanced plotting library then PyStPlot is not for you. But, if you want a lightweight plotting library that you can get up and running quickly without having to install extra dependencies, then use PyStPlot.
+    </p>
+	  <h2>Install with pip</h2>
           <p>
     <pre><code>
 	pip install pystplot
     </pre></code>
     </p>
-
-      <h1>Usage</h1>
+      <h2>Usage</h2>
       <p>To plot a function, simply assign x and y values to two lists and call `pystplot.plot(...)`.
 Call either the `pystplot.show()` to create an output file and show it in the browser or `pystplot.save(...)` to just save the html file.
 </p>
@@ -39,21 +40,21 @@ Call either the `pystplot.show()` to create an output file and show it in the br
     </p>
         <p>
       <pre><code>
-Parameters:
-        
-x_list             list of values for x-axis
-y_list             list of values for y-axis. Lists must be of same length
-property_string    sets appearence of graph. Possible choices:
-                   'o'   points
-                   '-'   line
-                   'r'   red
-                   'b'   blue
-                   'g'   green
-                   'y'   yellow
-                   'm'   magenta
-                   'c'   cyan
-                   'w'   white
-                   'k'   black         
+	  Parameters:
+          
+	  x_list             list of values for x-axis
+	  y_list             list of values for y-axis. Lists must be of same length
+	  property_string    sets appearence of graph. Possible choices:
+          'o'   points
+          '-'   line
+          'r'   red
+          'b'   blue
+          'g'   green
+          'y'   yellow
+          'm'   magenta
+          'c'   cyan
+          'w'   white
+          'k'   black         
 	  
       </pre></code>
     </p>
@@ -80,16 +81,16 @@ property_string    sets appearence of graph. Possible choices:
     </p>
     <p>
       <pre><code>
-Parameter:
+	  Parameter:
 
-file_name    string that contains file name of output html-file.	  
+	  file_name    string that contains file name of output html-file.	  
       </pre></code>
     </p>
 
           <h2>Subplot</h2>
     <p>
       <pre><code>
-subplot(rows, cols, index)
+	  subplot(rows, cols, index)
       </pre></code>
     </p>
     Creates a matrix of plots in a Matlab/Matplotlib manner. Call <code>subplot(rows, cols, index)</code>before <code>plot(x_list, y_list, property_string='-')</code> to tag the plot.
@@ -97,11 +98,11 @@ subplot(rows, cols, index)
     </p>
     <p>
       <pre><code>
-Parameters:
-    
-rows    number of rows in plot matrix
-cols    number of columns in plot matrix
-index   index of this specific plot - indexed from left to right.
+	  Parameters:
+	  
+	  rows    number of rows in plot matrix
+	  cols    number of columns in plot matrix
+	  index   index of this specific plot - indexed from left to right.
       </pre></code>
     </p>
     

@@ -40,6 +40,10 @@ font-family: "Myriad Pro", "Arial Narrow";*/
     width:20%;
 }
 
+pre{
+background-color: Beige; 
+}
+
 #menu {
 background-color: DarkSlateBlue; 
 padding: 6px 0 6px 40px;
